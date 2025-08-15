@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon espace – Compagnon pour la vie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="dashboard-page">
+  <header>
+    <div class="branding">
+      <img src="images/logo.png" alt="Logo Mon Compagnon" class="logo">
+      <span style="font-size:1.4rem;font-weight:bold;">Mon&nbsp;Compagnon</span>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="dogs.html">Trouver un chien</a>
+      <a href="javascript:void(0)" id="logout-btn">Se déconnecter</a>
+    </nav>
+  </header>
+  <div class="dashboard">
+    <h2>Bienvenue dans votre espace</h2>
+    <p>Montant actuel de la cagnotte de votre chien&nbsp;: <strong id="fund-value">0&nbsp;€</strong></p>
+    <section>
+      <h3>Décrivez votre animal</h3>
+      <form id="pet-form">
+        <label for="pet-name">Nom du chien</label>
+        <input type="text" id="pet-name" required>
+        <label for="pet-desc">Description</label>
+        <textarea id="pet-desc" placeholder="Décrivez le caractère, l’âge et les besoins de votre chien" required></textarea>
+        <label for="pet-vet">Certificat vétérinaire de santé</label>
+        <input type="file" id="pet-vet" accept="application/pdf,image/*">
+        <label for="pet-photos">Photos du chien</label>
+        <input type="file" id="pet-photos" accept="image/*" multiple>
+        <p id="pet-error" style="color:red;"></p>
+        <button type="submit">Enregistrer les informations</button>
+      </form>
+    </section>
+    <section class="pet-info" id="pet-info">
+      <!-- Pet info preview will be inserted here -->
+    </section>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

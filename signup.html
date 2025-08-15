@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S'abonner – Compagnon pour la vie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <img src="images/logo.png" alt="Logo Mon Compagnon" class="logo">
+      <span style="font-size:1.4rem;font-weight:bold;">Mon&nbsp;Compagnon</span>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Se connecter</a>
+      <a href="signup.html">S'abonner</a>
+      <a href="dogs.html">Trouver un chien</a>
+    </nav>
+  </header>
+  <form id="signup-form">
+    <h2>Créer un compte</h2>
+    <p>Abonnement mensuel&nbsp;: <strong>6&nbsp;€</strong> (dont 4&nbsp;€ versés à la cagnotte de votre chien)</p>
+    <label for="signup-email">Adresse e‑mail</label>
+    <input type="email" id="signup-email" required>
+    <label for="signup-password">Mot de passe</label>
+    <input type="password" id="signup-password" required>
+    <label for="signup-confirm">Confirmez le mot de passe</label>
+    <!-- we avoid using the native required attribute here so we can
+         display custom validation messages in the application script -->
+    <input type="password" id="signup-confirm">
+    <p id="signup-error" style="color:red;"></p>
+    <button type="submit">S'abonner</button>
+    <p style="text-align:center;margin-top:1rem;">Déjà inscrit&nbsp;? <a href="login.html">Se connecter</a></p>
+  </form>
+  <script src="js/app.js"></script>
+</body>
+</html>
